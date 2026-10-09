@@ -31,7 +31,9 @@ fun ProfileCard(
     containerColor: Color,
     nameColor: Color,
     addressColor: Color,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    @StringRes phone: Int? = null,
+    phoneColor: Color = Color.Unspecified
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -60,6 +62,15 @@ fun ProfileCard(
                     fontSize = spResource(R.dimen.name_size),
                     fontWeight = FontWeight.Bold
                 )
+
+                if (phone != null) {
+                    Spacer(Modifier.height(dimensionResource(R.dimen.text_gap_vertical)))
+                    Text(
+                        text = stringResource(phone),
+                        color = phoneColor,
+                        fontSize = spResource(R.dimen.detail_size)
+                    )
+                }
 
                 Spacer(Modifier.height(dimensionResource(R.dimen.text_gap_vertical)))
                 Text(
