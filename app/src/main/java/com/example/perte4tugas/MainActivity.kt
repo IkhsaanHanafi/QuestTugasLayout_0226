@@ -90,7 +90,27 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 phoneColor = colorResource(R.color.text_cyan),
                 addressColor = colorResource(R.color.text_yellow)
             )
-            // KARTU 3 DAN 4 DI SINI
+            // Kartu 3 – biru
+            ProfileCard(
+                name = R.string.name_zhilal,
+                phone = R.string.phone_zhilal,
+                address = R.string.address_zhilal,
+                containerColor = colorResource(R.color.card_blue),
+                nameColor = colorResource(R.color.text_white),
+                phoneColor = colorResource(R.color.text_cyan),
+                addressColor = colorResource(R.color.text_white)
+            )
+
+            // Kartu 4 – hijau
+            ProfileCard(
+                name = R.string.name_ahmad,
+                phone = R.string.phone_ahmad,
+                address = R.string.address_ahmad,
+                containerColor = colorResource(R.color.card_green),
+                nameColor = colorResource(R.color.text_white),
+                phoneColor = colorResource(R.color.text_cyan),
+                addressColor = colorResource(R.color.text_white)
+            )
         }
     }
 }
