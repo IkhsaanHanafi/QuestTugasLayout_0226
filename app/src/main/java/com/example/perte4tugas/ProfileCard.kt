@@ -22,6 +22,8 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.integerResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 
 @Composable
@@ -33,7 +35,10 @@ fun ProfileCard(
     addressColor: Color,
     modifier: Modifier = Modifier,
     @StringRes phone: Int? = null,
-    phoneColor: Color = Color.Unspecified
+    phoneColor: Color = Color.Unspecified,
+    nameFontFamily: FontFamily? = null,
+    nameFontStyle: FontStyle? = null,
+    nameFontWeight: FontWeight = FontWeight.Bold
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -60,7 +65,9 @@ fun ProfileCard(
                     text = stringResource(name),
                     color = nameColor,
                     fontSize = spResource(R.dimen.name_size),
-                    fontWeight = FontWeight.Bold
+                    fontWeight = nameFontWeight,
+                    fontFamily = nameFontFamily,
+                    fontStyle = nameFontStyle
                 )
 
                 if (phone != null) {
