@@ -68,7 +68,29 @@ fun MainScreen(modifier: Modifier = Modifier) {
         Spacer(Modifier.height(dimensionResource(R.dimen.header_bottom)))
 
         Column(verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.card_spacing))) {
-            // KARTU-KARTU NANTI DITARUH DI SINI
+            // Kartu 1 – abu-abu, nama cursive, tanpa nomor HP
+            ProfileCard(
+                name = R.string.name_bambang,
+                address = R.string.address_bambang,
+                containerColor = colorResource(R.color.card_gray),
+                nameColor = colorResource(R.color.text_white),
+                addressColor = colorResource(R.color.text_yellow),
+                nameFontFamily = FontFamily.Cursive,
+                nameFontStyle = FontStyle.Italic,
+                nameFontWeight = FontWeight.Normal
+            )
+
+            // Kartu 2 – ungu
+            ProfileCard(
+                name = R.string.name_gibran,
+                phone = R.string.phone_gibran,
+                address = R.string.address_gibran,
+                containerColor = colorResource(R.color.card_purple),
+                nameColor = colorResource(R.color.text_white),
+                phoneColor = colorResource(R.color.text_cyan),
+                addressColor = colorResource(R.color.text_yellow)
+            )
+            // KARTU 3 DAN 4 DI SINI
         }
     }
 }
