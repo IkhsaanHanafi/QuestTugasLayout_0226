@@ -90,6 +90,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 phoneColor = colorResource(R.color.text_cyan),
                 addressColor = colorResource(R.color.text_yellow)
             )
+
             // Kartu 3 – biru
             ProfileCard(
                 name = R.string.name_zhilal,
@@ -112,6 +113,15 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 addressColor = colorResource(R.color.text_white)
             )
         }
+
+        Spacer(Modifier.weight(integerResource(R.integer.weight_fill).toFloat()))
+
+        Text(
+            text = stringResource(R.string.copyright),
+            color = colorResource(R.color.text_title),
+            fontSize = spResource(R.dimen.copyright_size)
+        )
+        Spacer(Modifier.height(dimensionResource(R.dimen.copyright_bottom)))
     }
 }
 
