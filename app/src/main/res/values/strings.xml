@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">perte4tugas</string>
+
+    <color name="background_screen">#FFFBF8FF</color>
+    <color name="text_title">#FF000000</color>
+    <color name="text_white">#FFFFFFFF</color>
+    <color name="text_yellow">#FFFFFF00</color>
+    <color name="text_cyan">#FF00FFFF</color>
+
+
 </resources>
